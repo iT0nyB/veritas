@@ -44,7 +44,6 @@ group :development, :test do
 end
 
 gem 'twitter-bootstrap-rails'
-
 gem 'font-awesome-rails'
-
 gem 'simple_form'
+gem 'devise'
