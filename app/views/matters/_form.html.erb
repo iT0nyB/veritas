@@ -4,7 +4,7 @@
   <div class="form-inputs">
     <%= f.collection_select :type_id, Type.all, :id, :matterType, {prompt: "Choose a Matter Type"} %>
     <%= f.input :party %>
-    <%= f.input :address %>
+    <%= f.input :respondent%>
     <%= f.input :dateIncident %>
     <%= f.input :dateExpiry %>
     <%= f.input :docsReceived %>

@@ -11,11 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301220204) do
+ActiveRecord::Schema.define(version: 20180302022833) do
 
   create_table "matters", force: :cascade do |t|
-    t.string   "party"
-    t.text     "address"
     t.date     "dateIncident"
     t.date     "dateExpiry"
     t.text     "docsReceived"
@@ -24,6 +22,9 @@ ActiveRecord::Schema.define(version: 20180301220204) do
     t.datetime "updated_at",   null: false
     t.integer  "status_id"
     t.integer  "type_id"
+    t.integer  "user_id"
+    t.text     "party"
+    t.text     "respondent"
   end
 
   create_table "statuses", force: :cascade do |t|

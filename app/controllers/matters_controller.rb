@@ -1,10 +1,10 @@
 class MattersController < ApplicationController
   before_action :set_matter, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /matters
   # GET /matters.json
   def index
-    @matters = Matter.all
+    @matters = current_user.matters
   end
 
   # GET /matters/1
@@ -24,7 +24,7 @@ class MattersController < ApplicationController
   # POST /matters
   # POST /matters.json
   def create
-    @matter = Matter.new(matter_params)
+    @matter= current_user.matter.new(matter_params)
 
     respond_to do |format|
       if @matter.save
@@ -77,6 +77,6 @@ class MattersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def matter_params
-      params.require(:matter).permit(:party, :address, :dateIncident, :dateExpiry, :docsReceived, :cost, :status_id, :type_id)
+      params.require(:matter).permit(:type_id, :party, :respondent, :dateIncident, :dateExpiry, :docsReceived, :cost, :status_id)
     end
 end
