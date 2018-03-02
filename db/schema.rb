@@ -11,7 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171106054119) do
+ActiveRecord::Schema.define(version: 20180301220204) do
+
+  create_table "matters", force: :cascade do |t|
+    t.string   "party"
+    t.text     "address"
+    t.date     "dateIncident"
+    t.date     "dateExpiry"
+    t.text     "docsReceived"
+    t.decimal  "cost"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "status_id"
+    t.integer  "type_id"
+  end
+
+  create_table "statuses", force: :cascade do |t|
+    t.string   "statusName"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "types", force: :cascade do |t|
+    t.string   "matterType"
+    t.integer  "matterDuration"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

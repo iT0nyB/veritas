@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  matterType: MyString
+  matterDuration: 1
+
+two:
+  matterType: MyString
+  matterDuration: 1

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  party: MyString
+  address: MyText
+  dateOpened: 2018-02-28 22:31:12
+  dateIncident: 2018-02-28
+  dateExpiry: MyString
+  docsReceived: MyText
+  cost: 9.99
+
+two:
+  party: MyString
+  address: MyText
+  dateOpened: 2018-02-28 22:31:12
+  dateIncident: 2018-02-28
+  dateExpiry: MyString
+  docsReceived: MyText
+  cost: 9.99

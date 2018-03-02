@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type</strong>
+  <%= @matter.type.matterType %>
+</p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @matter.party %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @matter.address %>
+</p>
+
+<p>
+  <strong>Date of Incident:</strong>
+  <%= @matter.dateIncident %>
+</p>
+
+<p>
+  <strong>Matter Expires by:</strong>
+  <%= @matter.dateExpiry %>
+</p>
+
+<p>
+  <strong>Documents Received:</strong>
+  <%= @matter.docsReceived %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @matter.cost %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @matter.status.statusName %>
+</p>
+
+<p>
+  <strong>Date Opened:</strong>
+  <%= @matter.created_at %>
+</p>
+
+<%= link_to 'Edit', edit_matter_path(@matter) %> |
+<%= link_to 'Back', matters_path %>
